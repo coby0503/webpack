@@ -2,7 +2,12 @@ import React from "react";
 import "./App.scss";
 
 const App = () => {
-  console.log(process.env.REACT_APP_TEST);
-  return <div>{process.env.REACT_APP_TEST}</div>;
+  return (
+    <div>
+      <div className="box-wrap">
+        <div className="moving-box">문순려</div>
+      </div>
+    </div>
+  );
 };
 export default App;

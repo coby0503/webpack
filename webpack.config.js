@@ -4,12 +4,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const Dotenv = require("dotenv-webpack");
 
-const port = process.env.PORT;
-
 module.exports = (env, argv) => {
   console.log("env", env);
   console.log("argv", argv);
-  console.log("process.env", process.env);
+  console.log("process.env", env.port);
+  const port = env.port || 3000;
   return {
     // 개발환경
     mode: "development",
@@ -82,6 +81,7 @@ module.exports = (env, argv) => {
       new MiniCssExtractPlugin({
         filename: "index.css",
       }),
+      // .env파일 전역으로 쓸 수 있게
       new Dotenv({
         path:
           argv.mode === "development" ? ".env.development" : ".env.production",
