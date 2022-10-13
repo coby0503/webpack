@@ -1,1 +1,1 @@
-:root{background-color:red;color:blue}
+:root{color:#010101;background-color:#000}html{background-color:pink}body{margin:0;padding:0;background-color:pink}.box-wrap{background-color:pink}.moving-box{display:flex;align-items:center;justify-content:center;width:100px;height:100%;background-color:#fff;margin:0 auto;animation:move 5s infinite ease-in}@keyframes move{from{transform:translateY(0)}to{transform:translateY(-100%)}}
